@@ -1,4 +1,21 @@
+<% first_product = Product.first %>
+
+
+<h2> Hello world </h2>
 <h2> I AMA View </h2>
 <p>
   Find me in <%= Rails.root.join("app", "views", "products", __FILE__ ) %>
+</p>
+<% product = Product.where(:name => 'rails book').first %>
+<p>
+	Product Name: "<%= first_product.name %>" costs $<%= first_product.price %>
+</p>
+<p>
+	The seller for this product is named '<%= first_product.user.name %>'
+</p>
+<p>
+	New product listing of <%= product.name %>, <%= product.price %> and <%= product.user.name %>.
+</p>
+<p>
+	Number of products we have is: <%= Product.count %>
 </p>
