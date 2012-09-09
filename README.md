@@ -197,18 +197,18 @@ There is a lot of information in a tiny package. When things go wrong in your ap
 Visit this url: [localhost:3000/users](http://localhost:3000/users) and then find the log entry. Then open up the readme.md you copied onto your local machine and fill out this information:
 
 
-HTTP verb used in this request:
-URL:
-Controller Name:
-Controller Action:
-View File Name:
-Layout File Name:
-Response code of the request:
+HTTP verb used in this request:  GET
+URL:  /users
+Controller Name:   UsersController#index
+Controller Action:   HTTP
+View File Name:  users/index.html.erb
+Layout File Name:  layouts/application
+Response code of the request:  200
 
-You should also notice a new line or two that we didn't see before, what is it (copy and paste, hint: after User Load) ?
+You should also notice a new line or two that we didn't see before, what is it (copy and paste, hint: after User Load) ?  SELECT "users".* FROM "users"
 
 Why do you think this line is there?
-
+Rails call to get all the users
 
 
 Save and commit your answers.
@@ -250,6 +250,7 @@ Since we have a relationship between our products and our user we can show the o
     </p
 
 Check your logs again, did the SQL change? Are there any new statements, why?
+user load in addition to product load to look up user name.
 
 
 #### Homework:
